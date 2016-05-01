@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE scenario [
+	<!ENTITY workspaceDir1 "C:\vm02.veremes.net\produit\fme\rtest">
+	<!ENTITY fmePath "C:\serveurs\FME-2015.1.1-win32\fme.exe">
+	<!ENTITY workspace1 "getDPT_2014.fmw">
+	<!ENTITY qualigeoEngineDir "C:\vm02.veremes.net\produit\qualigeo\trunk\engine">
+]>
+<scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rtest.xsd">
+	<name>Qualigéo</name>
+	<author>Olivier</author>
+	<description>Scénario de test du logiciel Qualigéo</description>
+	<fme_path>&fmePath;</fme_path>
+	<rtestCollection>
+		<rtest>
+			<enabled>true</enabled>
+			<name>Test Schéma Reseau fibre</name>
+			<processCollection>
+				<process>
+					<description>Suppression du contrôle n°200</description>
+					<workspace>&workspaceDir1;\workspaces\sqlExecutor.fmw</workspace>
+					<parameterCollection>
+						<parameter name="dbConnection" value="olivier@localhost:5430/qualigeo"/>
+						<parameter name="dbFormat" value="POSTGRES"/>
+						<parameter name="sql" value="DELETE FROM q_control.control WHERE id_control = 200"/>
+					</parameterCollection>
+				</process>
+				<process>
+					<description>Lancement du contrôle n°200</description>
+					<workspace>&qualigeoEngineDir;\q_control.fmw</workspace>
+					<logfile>&qualigeoEngineDir;\q_control200.log</logfile>
+					<parameterCollection>
+						<parameter name="schema" value="Réseau fibre"/>
+						<parameter name="format" value="SHAPE"/>
+						<parameter name="formatSchema" value="SHAPE"/>
+						<parameter name="auteur" value="olivier"/>
+						<parameter name="commentaire" value=""/>
+						<parameter name="coordsys" value=""/>
+						<parameter name="genImage" value="0"/>
+						<parameter name="genStat" value="1"/>
+						<parameter name="nbErreurMax" value="0"/>
+						<parameter name="controlDatabase" value="qualigeo"/>
+						<parameter name="constraintDatabase" value="qualigeo"/>
+						<parameter name="controlServer" value="localhost"/>
+						<parameter name="constraintServer" value="localhost"/>
+						<parameter name="controlPort" value="5430"/>
+						<parameter name="constraintPort" value="5430"/>
+						<parameter name="controlUser" value="olivier"/>
+						<parameter name="constraintUser" value="olivier"/>
+						<parameter name="controlPassword" value="olivier"/>
+						<parameter name="constraintPassword" value="olivier"/>
+						<parameter name="imageDir" value="C:/serveurs/Qualigeo/Qualigeo/designer/IMG/85"/>
+						<parameter name="source" value='""C:/demo/Qualigeo/reseau/data/CABLE.shp" "C:/demo/Qualigeo/reseau/data/COMMUNE.shp" "C:/demo/Qualigeo/reseau/data/NOEUD.shp""'/>
+						<parameter name="idControl" value="200"/>
+						<parameter name="fts" value=""/>
+						<parameter name="datasetName" value=""/>
+						<parameter name="datasetVintage" value=""/>
+						<parameter name="fts" value=""/>
+					</parameterCollection>
+				</process>
+				<process>
+					<description>Post-traitement sur le contrôle n°200</description>
+					<workspace>&qualigeoEngineDir;\q_postTraitement.fmw</workspace>
+					<parameterCollection>
+						<parameter name="controlDatabase" value="qualigeo"/>
+						<parameter name="controlServer" value="localhost"/>
+						<parameter name="controlPort" value="5430"/>
+						<parameter name="controlUser" value="olivier"/>
+						<parameter name="controlPassword" value="olivier"/>
+						<parameter name="idControl" value="200"/>
+						<parameter name="controlState" value="0"/>
+						<parameter name="summaryFile" value=""/>
+						<parameter name="logfile" value="&qualigeoEngineDir;\q_control200.log"/>
+						<parameter name="GTF_CONNECTION_STRING" value=""/>
+					</parameterCollection>
+				</process>
+			</processCollection>
+			<checkCollection>
+				<check>
+					<description>Erreurs</description>
+					<source type="database" format="POSTGRES" connection="olivier@localhost:5430/qualigeo" dataset="select array_to_string(array(select id_error_type ||'-'|| count(*) as count from q_control.error where id_control = '200' group by id_error_type order by id_error_type),',') as return"/>
+					<condition type="regExp" expected="^E0008-1,E0009-3,E0011-3,E0012-58,E0015-1,E0030-3,E0031-4,E0043-361$"/>
+				</check>
+				<check>
+					<description>Erreurs</description>
+					<source type="database" format="POSTGRES" connection="olivier@localhost:5430/qualigeo" dataset="select array_to_string(array(select id_error_type ||'-'|| count(*) as count from q_control.error where id_control = '200' group by id_error_type order by id_error_type),',') as return"/>
+					<condition type="regExp" expected="^E0008-1,E0009-3,E0011-3,E0012-58,E0015-1,E0030-3,E0031-4,E0043-361$"/>
+				</check>
+			</checkCollection>
+		</rtest>
+		<rtest>
+			<enabled>true</enabled>
+			<name>Test de conversion de fichier</name>
+			<processCollection>
+				<process>
+					<description>Département par XY</description>
+					<workspace>&workspaceDir1;\workspaces\&workspace1;</workspace>
+					<parameterCollection>
+						<parameter name="xy" value="332300.1 2318700.0"/>
+						<parameter name="dest" value="&workspaceDir1;\workspaces\result\dpt.sqlite"/>
+					</parameterCollection>
+				</process>
+				<process>
+					<description>Extraction spatiale sur la Bretagne</description>
+					<workspace>&workspaceDir1;\workspaces\SpatialFilter2016.fmw</workspace>
+				</process>
+			</processCollection>
+			<checkCollection>
+				<check>
+					<description>Nombre d'entités=9</description>
+					<source type="file" format="SPATIALITE" dataset="&workspaceDir1;\workspaces\result\dpt.sqlite"/>
+					<condition type="featuresCount" expected="1"/>
+				</check>
+				<check>
+					<description>featuresCountByFtAndGeometry DPT.fme_aggregate:3|DPT.fme_polygon:6</description>
+					<source type="file" format="SPATIALITE" dataset="&workspaceDir1;\workspaces\result\dpt.sqlite"/>
+					<condition type="featuresCountByFtAndGeometry" expected="dpt.fme_aggregate:1"/>
+				</check>
+				<check>
+					<description>Nom du département</description>
+					<source type="file" format="SPATIALITE" dataset="&workspaceDir1;\workspaces\result\dpt.sqlite"/>
+					<condition type="attributeValue" attribute="nom_dep" row="1" expected="MAYENNE"/>
+				</check>
+				<check>
+					<description>DPT 92</description>
+					<source type="file" format="SHAPE" dataset="&workspaceDir1;\workspaces\data\DPT.SHP"/>
+					<condition type="attributeValue" attribute="NOM_DEP" row="3" expected="ALLIER"/>
+				</check>
+				<!--
+					<countGeometry>DPT.fme_donut:13|DPT.fme_polygon:67|DPT.fme_aggregate:16</countGeometry>
+					<checksumCollection>
+						<checksum ft="DPT" crc_geom="ABDE145" attributes="NUM_DEP|NUM_REG|POP_DEP" crc_attributes="EFFFE23"/>
+						<checksum ft="REGION" crc_geom="ABDE145" crc_attributes="EFFFE23"/>
+					</checksumCollection>
+-->
+			</checkCollection>
+		</rtest>
+	</rtestCollection>
+</scenario>

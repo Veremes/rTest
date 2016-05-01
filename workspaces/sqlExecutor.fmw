@@ -1,0 +1,373 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Ligne de commande pour exécuter le projet :
+#    
+#    
+#    C:\serveurs\FME-2015.1.1-win32\fme.exe C:\vm02.veremes.net\produit\fme\rtest\sqlExecutor.fmw
+#          --dbConnection "olivier@localhost:5430/qualigeo"
+#          --dbFormat "POSTGRES"
+#          --sql "select error_number as return from q_control.control where id_control = 200"
+#    
+#    
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! FME_DOCUMENT_PRIORGUID="a2f65f4c-8506-4a27-a14c-2c9051ee6619,6d03f87a-07ad-491f-acec-10e3ecc6eea0,f519a420-2a90-498e-81f2-c90fbcdb8ea4,1da5ef42-d42d-4308-8bdc-96e2a67c6a91,98cb1ab7-63d7-41c0-a231-b2a0fc422b8b,cbe1284c-bf4c-47ac-a96a-541bb464dfab,b3236402-b0fa-4c16-80fc-e5ab15e44c57,c20672a5-4c87-42f1-b942-17026d7f1925,bf36aa7e-b16d-48c0-8b41-98c95effa7e0,bab2a50f-dede-40c7-af19-c666ca7fbf1f"
+#! ZOOM_SCALE="69"
+#! BEGIN_PYTHON=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! DOC_EXTENTS="2492.04 310.821"
+#! SHOW_INFO_NODES="true"
+#! MAX_LOG_FEATURES="200"
+#! LAST_SAVE_DATE="2015-11-16T22:09:58"
+#! SHOW_ANNOTATIONS="true"
+#! USAGE=""
+#! DOC_TOP_LEFT="36.0738 -557.894"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! FME_REPROJECTION_ENGINE="FME"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! LOG_MAX_PRECISION="Yes"
+#! PASSWORD=""
+#! END_TCL=""
+#! SOURCE="NONE"
+#! WORKSPACE_VERSION="1"
+#! VIEW_POSITION="-78.2617 239.133"
+#! LEGAL_TERMS_CONDITIONS=""
+#! LAST_SAVE_BUILD="FME(R) 2015.1.1.0 (20150715 - Build 15515 - WIN32)"
+#! IGNORE_READER_FAILURE="No"
+#! BEGIN_TCL=""
+#! REQUIREMENTS_KEYWORD=""
+#! DESTINATION="NONE"
+#! DESTINATION_ROUTING_FILE=""
+#! DESCRIPTION=""
+#! FME_SERVER_SERVICES=""
+#! REDIRECT_TERMINATORS="NONE"
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! HISTORY=""
+#! FME_BUILD_NUM="15515"
+#! TITLE=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! SOURCE_ROUTING_FILE=""
+#! REQUIREMENTS=""
+#! FME_DOCUMENT_GUID="440fe1c1-c149-4482-b101-718bde246fb0"
+#! LOG_FILE=""
+#! END_PYTHON=""
+#! CATEGORY=""
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT dbConnection Connexion nommée :"
+#! DEFAULT_VALUE="olivier@localhost:5430/qualigeo"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL LOOKUP_CHOICE_OR_ATTR dbFormat Postgresql,POSTGRES%Postgis,POSTGIS%Oracle&lt;space&gt;Spatial&lt;space&gt;Object,ORACLE8I Format Base de données :"
+#! DEFAULT_VALUE="POSTGRES"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR sql Requête :"
+#! DEFAULT_VALUE="select error_number as return from q_control.control where id_control = 200"
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="41"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Impossible d&apos;utiliser operator &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;sous forme de paramètre publié.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;bug de fme 2015 ?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="606.942 -247.073"
+#! TOP_LEFT="606.942 -247.073"
+#! BOTTOM_RIGHT="605.942 -246.073"
+#! BOUNDING_RECT="606.942 -247.073 -1 -1"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="33"
+#! />
+#! <COMMENT
+#! IDENTIFIER="37"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Gestion des&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;caractères spéciaux&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="1264.23 -395.893"
+#! TOP_LEFT="1264.23 -395.893"
+#! BOTTOM_RIGHT="1263.23 -394.893"
+#! BOUNDING_RECT="1264.23 -395.893 -1 -1"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="57"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="1"
+#! TYPE="Creator"
+#! VERSION="5"
+#! POSITION="36.0738 -444.077"
+#! BOUNDING_RECT="36.0738 -444.077 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15515"
+#! >
+#! <OUTPUT_FEAT NAME="CREATED"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATEND" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Creator"/>
+#! <XFORM_PARM PARM_NAME="COORDS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CRE_ATTR" PARM_VALUE="_creation_instance"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEOM" PARM_VALUE="&lt;lt&gt;?xml&lt;space&gt;version=&lt;quote&gt;1.0&lt;quote&gt;&lt;space&gt;encoding=&lt;quote&gt;US_ASCII&lt;quote&gt;&lt;space&gt;standalone=&lt;quote&gt;no&lt;quote&gt;&lt;space&gt;?&lt;gt&gt;&lt;lt&gt;geometry&lt;space&gt;dimension=&lt;quote&gt;2&lt;quote&gt;&lt;gt&gt;&lt;lt&gt;null&lt;solidus&gt;&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;geometry&lt;gt&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM" PARM_VALUE="1"/>
+#! <XFORM_PARM PARM_NAME="GEOMTYPE" PARM_VALUE="Geometry Object"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="SQLExecutor"
+#! VERSION="6"
+#! POSITION="1974.11 -540.128"
+#! BOUNDING_RECT="1974.11 -540.128 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15515"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_sql" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="return" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="INITIATOR"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_sql" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(dbConnection)"/>
+#! <XFORM_PARM PARM_NAME="POSTGRES_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_sql&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="POSTGRES_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,&quot;IGNORE TEXT&quot;,POSTGRES&lt;space&gt;,POSTGRES_NAMED_CONNECTION,&quot;IGNORE TEXT&quot;,POSTGRES&lt;space&gt;Connexion&lt;space&gt;:"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLExecutor"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="Keep Initiator Attributes if Conflict"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="return"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="POSTGRES"/>
+#! <XFORM_PARM PARM_NAME="POSTGRES_NAMED_CONNECTION" PARM_VALUE="$(dbConnection)"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Initiator Geometry Only"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="33"
+#! TYPE="ParameterFetcher"
+#! VERSION="4"
+#! POSITION="679.622 -484.867"
+#! BOUNDING_RECT="679.622 -484.867 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15515"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_sql" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_sql {$(sql)}"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="57"
+#! TYPE="StringPairReplacer"
+#! VERSION="1"
+#! POSITION="1333.23 -557.894"
+#! BOUNDING_RECT="1333.23 -557.894 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15515"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_sql" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringPairReplacer"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SRC_ATTR" PARM_VALUE="_sql"/>
+#! <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="RESULT_ATTR" PARM_VALUE="_sql"/>
+#! <XFORM_PARM PARM_NAME="MAP" PARM_VALUE="&lt;lt&gt;coma&lt;gt&gt;&lt;space&gt;&lt;comma&gt;&lt;space&gt;&lt;lt&gt;apos&lt;gt&gt;&lt;space&gt;&lt;apos&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="Logger"
+#! VERSION="3"
+#! POSITION="2528.11 -540.128"
+#! BOUNDING_RECT="2528.11 -540.128 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! LAST_PARM_EDIT="15515"
+#! >
+#! <OUTPUT_FEAT NAME="LOGGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_sql" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="return" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="MAXCOORDS" PARM_VALUE="20"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLExecutor_Result"/>
+#! <XFORM_PARM PARM_NAME="MAXFEATS" PARM_VALUE="20"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MESSAGE" PARM_VALUE="Feature is:"/>
+#! <XFORM_PARM PARM_NAME="FEATURE_TYPE" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="44"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="33"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="58"
+#! SOURCE_NODE="33"
+#! TARGET_NODE="57"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="59"
+#! SOURCE_NODE="57"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="11"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+DEFAULT_MACRO dbConnection olivier@localhost:5430/qualigeo
+GUI OPTIONAL TEXT dbConnection Connexion nommée :
+DEFAULT_MACRO dbFormat POSTGRES
+GUI OPTIONAL LOOKUP_CHOICE dbFormat Postgresql,POSTGRES%Postgis,POSTGIS%Oracle<space>Spatial<space>Object,ORACLE8I Format Base de données :
+DEFAULT_MACRO sql select error_number as return from q_control.control where id_control = 200
+GUI OPTIONAL TEXT sql Requête :
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE NULL
+READER_KEYWORD NULL_SOURCE
+NULL_SOURCE_DATASET null
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)sqlExecutor.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME sqlExecutor
+MACRO FME_VIEWER_APP fmedatainspector
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+Tcl2 proc Creator_CoordSysRemover {} {   global FME_CoordSys;   set FME_CoordSys {}; }
+MACRO Creator_XML     NOT_ACTIVATED
+MACRO Creator_CLASSIC NOT_ACTIVATED
+MACRO Creator_2D3D    2D_GEOMETRY
+MACRO Creator_COORDS  <Unused>
+INCLUDE [ if { {Geometry Object} == {Geometry Object} } {            puts {MACRO Creator_XML *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Coordinate List} } {            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {3D Coordinate List} } {            puts {MACRO Creator_2D3D 3D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Min/Max Box} } {            set comment {                We need to turn the COORDS which are                    minX minY maxX maxY                into a full polygon list of coordinates            };            set splitCoords [split [string trim {<Unused>}]];            if { [llength $splitCoords] > 4} {               set trimmedCoords {};               foreach item $splitCoords { if { $item != {} } {lappend trimmedCoords $item} };               set splitCoords $trimmedCoords;            };            if { [llength $splitCoords] != 4 } {                error {Creator: Coordinate list is expected to be a space delimited list of four numbers as 'minx miny maxx maxy' - `<Unused>' is invalid};            };            set minX [lindex $splitCoords 0];            set minY [lindex $splitCoords 1];            set maxX [lindex $splitCoords 2];            set maxY [lindex $splitCoords 3];            puts "MACRO Creator_COORDS $minX $minY $minX $maxY $maxX $maxY $maxX $minY $minX $minY";            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+FACTORY_DEF $(Creator_XML) CreationFactory    FACTORY_NAME Creator_XML_Creator    CREATE_AT_END no    OUTPUT FEATURE_TYPE _____CREATED______        @Geometry(FROM_ENCODED_STRING,<lt>?xml<space>version=<quote>1.0<quote><space>encoding=<quote>US_ASCII<quote><space>standalone=<quote>no<quote><space>?<gt><lt>geometry<space>dimension=<quote>2<quote><gt><lt>null<solidus><gt><lt><solidus>geometry<gt>)
+FACTORY_DEF $(Creator_CLASSIC) CreationFactory    FACTORY_NAME Creator_CLASSIC_Creator    $(Creator_2D3D) $(Creator_COORDS)    CREATE_AT_END no    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * TeeFactory    FACTORY_NAME Creator_Cloner    INPUT FEATURE_TYPE _____CREATED______    NUMBER_OF_COPIES 1    COPY_NUMBER_ATTRIBUTE "_creation_instance"    OUTPUT FEATURE_TYPE Creator_CREATED        @Tcl2(Creator_CoordSysRemover)        @CoordSys()        fme_feature_type Creator
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc ParameterFetcher_2_doFetch {} {    foreach {name val} {"_sql {$(sql$encode)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher_2}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher_2}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME ParameterFetcher_2    INPUT  FEATURE_TYPE Creator_CREATED    OUTPUT FEATURE_TYPE ParameterFetcher_2_OUTPUT         @Tcl2(ParameterFetcher_2_doFetch)
+
+# -------------------------------------------------------------------------
+
+MACRO casemac
+INCLUDE [ if { {no} == {no} } { puts {MACRO casemac -nocase}} ]
+Tcl2 proc StringPairReplacer_replace {} {     FME_SetAttribute {"_sql"} [string map $(casemac) [FME_DecodeText {"<lt>coma<gt><space><comma><space><lt>apos<gt><space><apos>"}] [FME_GetAttribute {"_sql"}]]     }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringPairReplacer    INPUT  FEATURE_TYPE ParameterFetcher_2_OUTPUT    OUTPUT FEATURE_TYPE StringPairReplacer_OUTPUT         @Tcl2(StringPairReplacer_replace)
+
+# -------------------------------------------------------------------------
+MACRO SQLExecutor_DIRECTIVES QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS Yes NAMED_CONNECTION "$(dbConnection)"
+
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE StringPairReplacer_OUTPUT    QUERY_SQL            "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_sql<closeparen>,SQLExecutor)"    READER_TYPE          POSTGRES    READER_DATASET       "@EvaluateExpression(FDIV,STRING_ENCODED,$(dbConnection$encode),SQLExecutor)"    COMBINE_ATTRIBUTES   PREFER_QUERY    COMBINE_GEOMETRY     QUERY_ONLY    READER_PARAMS        $(SQLExecutor_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE SQLExecutor_RESULT    OUTPUT QUERY FEATURE_TYPE SQLExecutor_INITIATOR
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME SQLExecutor_Result_Logger    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE SQLExecutor_Result_LOGGED                  @Log("SQLExecutor_Result: Feature is:","20","20")                  @FeatureType(SQLExecutor_Result_LOGGED)
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor_Result LOGGED Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_Result_LOGGED
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
