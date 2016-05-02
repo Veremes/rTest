@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE scenario [
-	<!ENTITY workspaceDir1 "C:\vm02.veremes.net\produit\fme\rtest">
-	<!ENTITY fmePath "C:\serveurs\FME-2016.0.1-win32\fme.exe">
+	<!ENTITY workspaceDir1 "C:\ ....  \rtest">
+	<!ENTITY fmePath "C:\ .... \fme.exe">
 	<!ENTITY workspace1 "getDPT_2014.fmw">
 ]>
 <scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rtest.xsd">
