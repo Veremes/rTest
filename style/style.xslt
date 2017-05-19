@@ -21,9 +21,9 @@
 					.left-column{background-color:rgba(0,18,76,1) !important;color:white !important;width="30%";}
 					.right-column{background-color:#E8E6E8 !important;width="70%";}
 					.scenario{border: 1px solid rgba(0,18,76,1); width: 800px; margin: 0px; padding: 20px;}
-					.rtest{border: 1px solid rgba(0,18,76,1); width: 800px; margin-top: 64px; padding: 0px 20px 20px 20px;}
+					.{border: 1px solid rgba(0,18,76,1); width: 800px; margin-top: 64px; padding: 0px 20px 20px 20px;}
 				</style>
-				<title>Rapport de test</title>
+				<title>rTest report</title>
 			</head>
 			<body>
 				<table cellspacing="2" cellpadding="5" style="width: 800px;">
@@ -32,16 +32,16 @@
 							<img src='data:image/png;base64,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'/>
 						</td>
 						<td style="background-color:#ffffff;">
-							<h1>Rapport de test</h1>
+							<h1>rTest report</h1>
 						</td>
 					</tr>
 				</table>
 				<div class="scenario">
-					<h2>Scénario</h2>
+					<h2>Scenario</h2>
 					<table cellspacing="2" cellpadding="5" class="description" style=" width: 100%;">
 						<tr>
 							<td class="left-column">
-								<strong>Nom</strong>
+								<strong>Name</strong>
 							</td>
 							<td class="right-column">
 								<xsl:value-of select="gml:FeatureCollection/gml:featureMember/fme:control/fme:scenario"/>
@@ -57,7 +57,7 @@
 						</tr>
 						<tr>
 							<td class="left-column">
-								<strong>Fichier de scénario</strong>
+								<strong>Scenario file</strong>
 							</td>
 							<td class="right-column">
 								<xsl:value-of select="gml:FeatureCollection/gml:featureMember/fme:control/fme:dataset"/>
@@ -65,7 +65,7 @@
 						</tr>
 						<tr>
 							<td class="left-column">
-								<strong>Auteur</strong>
+								<strong>Author</strong>
 							</td>
 							<td class="right-column">
 								<xsl:value-of select="gml:FeatureCollection/gml:featureMember/fme:control/fme:author"/>
@@ -73,15 +73,15 @@
 						</tr>
 						<tr>
 							<td class="left-column">
-								<strong>Date du test</strong>
+								<strong>Test date</strong>
 							</td>
 							<td class="right-column">
-								<xsl:value-of select="concat(substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date, 4, 2), '/', substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date, 1, 2), '/', substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date,7,2),' ',substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date, 10, 8))"/>
+								<xsl:value-of select="concat(substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date, 9, 2), '/', substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date, 6, 2), '/', substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date,1,4),' ',substring(gml:FeatureCollection/gml:featureMember/fme:control/fme:date, 12, 8))"/>
 							</td>
 						</tr>
 						<tr>
 							<td class="left-column">
-								<strong>FME</strong>
+								<strong>FME instance</strong>
 							</td>
 							<td class="right-column">
 								<xsl:value-of select="gml:FeatureCollection/gml:featureMember/fme:control/fme:fme_path"/>
@@ -90,22 +90,21 @@
 					</table>
 				</div>
 				<br/>
-				<h2>RTest</h2>
 				<xsl:for-each select="gml:FeatureCollection/gml:featureMember/fme:rtest">
 					<div class="rtest">
 						<h2>
 							<xsl:value-of select="fme:name"/>
 						</h2>
-						<h3>Traitements</h3>
+						<h3>Processings</h3>
 						<table cellspacing="2" cellpadding="5">
 							<tr>
 								<td class="head" width="200">Description</td>
 								<td class="head" width="30">Log</td>
-								<td class="head" width="140">Traitement</td>
-								<td class="head" width="80">Durée</td>
+								<td class="head" width="140">Workspace</td>
+								<td class="head" width="80">Duration</td>
 								<td class="head" width="80">PeakMemory</td>
 								<td class="head" width="92">CurrentMemory</td>
-								<td class="head" width="72">Statut</td>
+								<td class="head" width="72">Status</td>
 							</tr>
 							<xsl:for-each select="fme:processCollection/fme:process">
 								<xsl:variable name='danger'>
@@ -148,13 +147,13 @@
 								</tr>
 							</xsl:for-each>
 						</table>
-						<h3>Vérifications</h3>
+						<h3>Checks</h3>
 						<table cellspacing="2" cellpadding="5">
 							<tr>
 								<td class="head" width="220">Description</td>
-								<td class="head" width="210">Attendu</td>
-								<td class="head" width="210">Observé</td>
-								<td class="head" width="72">Statut</td>
+								<td class="head" width="210">Expected</td>
+								<td class="head" width="210">Observed</td>
+								<td class="head" width="72">Status</td>
 							</tr>
 							<xsl:for-each select="fme:checkCollection/fme:check">
 								<xsl:variable name='danger_verif'>
