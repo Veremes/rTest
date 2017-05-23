@@ -1,5 +1,5 @@
 # rTest
-Testing tool for FME workspaces (ETL from Safe Software)
+Testing tool for FME workspaces (ETL from Safe Software http://www.safe.com)
 
 The code contains an example of scenario shown at the 2017 FME User Conference in vancouver.
 To run it execute the folowing command line:
