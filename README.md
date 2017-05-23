@@ -1,8 +1,12 @@
 # rTest
-Test tool for FME workspaces (ETL from Safe Software)
+Testing tool for FME workspaces (ETL from Safe Software)
 
-To use the demo scenario you have to edit the file sc_fmewt2016.xml and to set the variables workspaceDir1 (full path to the rTest-master directory) and fmePath (full path to fme.exe).
-Then run scenarioPlayer.fmw in FME Workbench (2015 or above). Set the published parameter "Fichier de scénario (.xml)" to the sc_fmewt2016.xml path.
-The result will be written in rTest\result\rapport.html
+The code contains an example of scenario shown at the 2017 FME User Conference in vancouver.
+To run it execute the folowing command line:
+fme.exe .\scenarioPlayer.fmw --scenarioXml ".\scenario\sc_HelloWorld.xml" --destHtml ".\report\world.html"
+
+The current directory must contain scenarioPlayer.fmw.
+FME Desktop 2017 must be previously installed. 
+The result will be written in .\report\world.html
 
 Email to support@veremes.com for more information.
