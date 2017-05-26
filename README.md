@@ -1,12 +1,9 @@
 # rTest
 Testing tool for FME workspaces (ETL from Safe Software http://www.safe.com)
 
-The code contains an example of scenario shown at the 2017 FME User Conference in vancouver.
-To run it execute the folowing command line:
-fme.exe .\scenarioPlayer.fmw --scenarioXml ".\scenario\sc_HelloWorld.xml" --destHtml ".\report\world.html"
+To test a FME Workspace you have to write a Scenario xml file compliant with the scenario/rtest.xsd application schema.
+Then you can run it with scenarioPlayer.fmw. This will produce a html report file that shows the status of each process, a link to the log file, duration and memory consumption and the status of each checks.
 
-The current directory must contain scenarioPlayer.fmw.
-FME Desktop 2017 must be previously installed. 
-The result will be written in .\report\world.html
+See example in the  release.
 
-Email to support@veremes.com for more information.
+Email to support@veremes.com if you need more information or a more complete scenario using a database based example (PostgreSql).
