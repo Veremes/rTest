@@ -34,6 +34,11 @@
 					<xs:restriction base="xs:string"/>
 				</xs:simpleType>
 			</xs:attribute>
+			<xs:attribute name="ft" use="optional">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:attribute>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="scenario">
@@ -167,8 +172,7 @@
 	</xs:element>
 	<xs:element name="author">
 		<xs:simpleType>
-			<xs:restriction base="xs:string">
-			</xs:restriction>
+			<xs:restriction base="xs:string"/>
 		</xs:simpleType>
 	</xs:element>
 </xs:schema>
