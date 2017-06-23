@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE scenario [
+	<!ENTITY workspaceDir ".">
+	<!ENTITY fmePath "fme.exe">
+]>
+<scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rtest.xsd">
+	<name>Hello World !</name>
+	<author>Olivier</author>
+	<description>Scenario for 2017 International User Conference Vancouver</description>
+	<fme_path>&fmePath;</fme_path>
+	<rtestCollection>
+		<rtest>
+			<enabled>true</enabled>
+			<deletebefore>&workspaceDir;\workspaces\result\country.sqlite</deletebefore>
+			<name>Extract country by XY</name>
+			<processCollection>
+				<process>
+					<description>XY in an aggregate</description>
+					<workspace>&workspaceDir;\workspaces\HelloWorld.fmw</workspace>
+					<parameterCollection>
+						<parameter name="xy" value="-123.0 49.1"/>
+					</parameterCollection>
+				</process>
+			</processCollection>
+			<checkCollection>
+				<check>
+					<description>Number of features</description>
+					<source type="file" format="SPATIALITE" dataset="&workspaceDir;\workspaces\result\country.sqlite"/>
+					<condition type="featuresCount" expected="1"/>
+				</check>			
+				<check>
+					<description>Numb. of ft. by type + geometry</description>
+					<source type="file" format="SPATIALITE" dataset="&workspaceDir;\workspaces\result\country.sqlite"/>
+					<condition type="featuresCountByFtAndGeometry" expected="country.fme_aggregate:1"/>
+				</check>
+				<check>
+					<description>Country name</description>
+					<source type="file" format="SPATIALITE" dataset="&workspaceDir;\workspaces\result\country.sqlite"/>
+					<condition type="attributeValue" attribute="name" row="1" expected="Canada"/>
+				</check>
+			</checkCollection>
+		</rtest>
+	</rtestCollection>
+</scenario>
